@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".LoginFragment">
 
     <TextView
@@ -18,6 +19,7 @@
 
     <TextView
         android:id="@+id/tv_subtitle"
+        style="@style/TextAppearance.MaterialComponents.Body2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tag"
@@ -41,20 +43,30 @@
         android:background="@drawable/et_custom"
         android:textSize="15sp" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/et_password"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="@string/password"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
-        android:padding="15dp"
-        android:fontFamily="@font/roboto_regular"
-        android:inputType="textPassword"
-        android:layout_centerInParent="true"
-        android:background="@drawable/et_custom"
-        android:textSize="15sp" />
+        app:boxBackgroundMode="none"
+        app:hintEnabled="false"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/password"
+            android:padding="15dp"
+            android:fontFamily="@font/roboto_regular"
+            android:inputType="textPassword"
+            android:layout_centerInParent="true"
+            android:background="@drawable/et_custom"
+            android:textSize="15sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btn_login"

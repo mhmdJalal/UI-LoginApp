@@ -1,10 +1,10 @@
 package com.example.loginapp;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import java.util.ArrayList;
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(pagerAdapter);
     }
 
-    class AuthenticationPagerAdapter extends FragmentPagerAdapter {
+    static class AuthenticationPagerAdapter extends FragmentPagerAdapter {
         private ArrayList<Fragment> fragmentList = new ArrayList<>();
 
         public AuthenticationPagerAdapter(FragmentManager fm) {
